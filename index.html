@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Furniture Catalogue</title>
+<style>
+
+img,table{
+border-radius:7px;
+}
+
+.form-section{
+border-radius: 100px ;
+padding:20px;
+width:400px;
+background:#fff;
+margin-left:auto;
+margin-right:auto;
+margin-top:40px;
+}
+
+input,textarea{
+display:block;
+border-radius: 5px 25px 25px 5px;
+padding:10px;
+margin:20px 0;
+}
+
+button{
+padding:10px;
+border-radius: 5px;
+background-color:#5A2D0C;
+color:white;
+}
+</style>
+</head>
+
+<body bgcolor="#D2B48C">
+
+<script>
+function checkform(form){
+
+if(form.uname.value==""){
+alert("Error: Enter your name T_T");
+form.uname.focus();
+return false;
+}
+
+re=/^[A-Z-a-z]/
+if(!re.test(form.uname.value)){
+alert("Error: You can only use letters for your name  '_'");
+form.uname.focus();
+return false;
+}
+
+if(form.email.value=="" && form.mob_no.value==""){
+alert("Error: Enter your Email or Mobile no.");
+form.mob_no.focus();
+return false;
+}
+
+if(form.mob_no.value!=""){
+if(form.mob_no.value.length!=10){
+alert("Error: Enter correct mobile number");
+form.mob_no.focus();
+return false;
+}}
+
+if(form.message.value==""){
+alert("Error: Enter your message");
+form.message.focus();
+return false;
+}
+
+alert("Thank you "+form.uname.value +" for interacting with our website! Your form has been submitted.");
+
+
+}
+
+</script>
+
+<h1 align="center" style="color:#5A2D0C;">Furniture Catalogue</h1>
+<p align="center"><i>Welcome to our premium furniture collection</i></p>
+
+<hr>
+
+<table border="1" align="center" cellpadding="10" bgcolor="#F5DEB3">
+
+<tr bgcolor="#8B4513">
+<th>Furniture</th>
+<th>Image</th>
+<th>Description</th>
+<th>Price</th>
+</tr>
+
+<tr>
+<td>Sofa</td>
+<td>
+<img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7" width="150" >
+</td>
+<td>Comfortable leather sofa perfect for relaxing in the living room.</td>
+<td>₹25,000</td>
+</tr>
+
+<tr>
+<td>Dining Table</td>
+<td>
+<img src="D:\onno-zGKRmwzplVc-unsplash.jpg"
+alt="dining table"
+width="150">
+</td>
+<td>Elegant wooden dining table suitable for family meals.</td>
+<td>₹18,000</td>
+</tr>
+
+<tr>
+<td>Bed</td>
+<td>
+<img src="https://images.unsplash.com/photo-1505693314120-0d443867891c" width="150">
+</td>
+<td>King size wooden bed designed for comfort and durability.</td>
+<td>₹30,000</td>
+</tr>
+
+<tr>
+<td>Chair</td>
+<td>
+<img src="https://images.unsplash.com/photo-1503602642458-232111445657" width="150">
+</td>
+<td>Stylish wooden chair perfect for office or study use.</td>
+<td>₹4,500</td>
+</tr>
+
+</table>
+
+<hr><br>
+<div class="form-section" align="center">
+<h2>Contact/ Order Form</h2><br>
+<form onsubmit="return checkform(this);" >
+<input type="text" name="uname" placeholder="Your Name">
+<input type="email" name="email" placeholder="Your Email">
+<input type="number" name="mob_no" placeholder="Mobile Number">
+<input type="text" name="item" placeholder="furniture item">
+<textarea name="message" placeholder="Your Message"></textarea><br>
+<button type="submit">Submit</button>
+</form>
+</div>
+
+<h3 align="center">Contact Us</h3>
+<p align="center">Email: furniturestore@gmail.com</p>
+<p align="center">Phone: +91 9876543210</p>
+<p align="center">© 2026 Furniture Store</p>
+
+</body>
+</html>
